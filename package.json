@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/cltmedicman/Social-Network-API#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^6.0.14"
+    "express": "^4.17.2",
+    "moment": "^2.29.1",
+    "mongoose": "^6.1.2"
   }
 }
