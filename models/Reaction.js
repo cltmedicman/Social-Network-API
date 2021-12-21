@@ -1,7 +1,7 @@
 const {Schema, model} = require('mongoose');
 const moment = require('moment');
 
-const ReactionSchema = new Schema (
+const reactionSchema = new Schema (
     {
 
         reactionBody: {
@@ -25,4 +25,4 @@ const ReactionSchema = new Schema (
     }
 )
 
-module.exports = ReactionSchema;
+module.exports = reactionSchema;
