@@ -3,10 +3,6 @@ const moment = require('moment');
 
 const ReactionSchema = new Schema (
     {
-        reactionId: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId()
-        },
 
         reactionBody: {
             type: String,
@@ -50,10 +46,17 @@ const thoughtSchema = new Schema (
             ref: 'User'
         },
 
-        reactions: [ReactionSchema],
+        reactions: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Reaction'
+            }
+        ]
     }
 )
 
 const Thought = model('Thought', thoughtSchema);
+
+const Reaction = model('Reaction', ReactionSchema);
 
 module.exports = Thought;

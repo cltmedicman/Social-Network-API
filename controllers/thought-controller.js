@@ -4,10 +4,6 @@ const thoughtController = {
 
     getAllThoughts(req, res) {
         Thought.find({})
-        .populate({
-            path: 'user',
-            select: '-__v'
-        })
         .select('-__v')
         .sort({ _id: -1 })
         .then(dbThoughtData => res.json(dbThoughtData))
@@ -19,10 +15,6 @@ const thoughtController = {
 
     getThoughtById({ params }, res) {
         Thought.findOne({ _id: params.id })
-            .populate({
-                path: 'user',
-                select: '-__v'
-            })
            .select('-__v')
            .sort({ _id: -1 })
            .then(dbThoughtData => res.json(dbThoughtData))
@@ -70,7 +62,7 @@ const thoughtController = {
     removeReaction({ params }, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
-            { $pull: { reactions: { reactionId: params.reactionId } } },
+            { $pull: { reactions: params.reactionId } },
             { new: true }
         )
         .then(dbThoughtData => res.json(dbThoughtData))
