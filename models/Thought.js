@@ -46,12 +46,7 @@ const thoughtSchema = new Schema (
             ref: 'User'
         },
 
-        reactions: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: model('Reaction', ReactionSchema)
-            }
-        ]
+        reactions: [ReactionSchema]
     }
 )
 
