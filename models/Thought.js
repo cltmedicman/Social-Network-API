@@ -49,14 +49,12 @@ const thoughtSchema = new Schema (
         reactions: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'Reaction'
+                ref: model('Reaction', ReactionSchema)
             }
         ]
     }
 )
 
 const Thought = model('Thought', thoughtSchema);
-
-const Reaction = model('Reaction', ReactionSchema);
 
 module.exports = Thought;
