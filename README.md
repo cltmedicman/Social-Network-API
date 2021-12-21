@@ -8,12 +8,17 @@
 
   ## Table of Contents
 
+  - [Video](#Video)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributions](#contributions)
   - [Tests](#tests)
   - [Questions](#questions)
   - [License](#license)
+
+  ## Video
+  
+  https://watch.screencastify.com/v/7oaRm55R8effQd8bNKUJ
 
   ## Installation
 
